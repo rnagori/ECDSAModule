@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		95AC6F3D1FDEB92C0059EFF5 /* PtoyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AC6F3C1FDEB92C0059EFF5 /* PtoyClient.swift */; };
+		95AC6FA71FE00BA10059EFF5 /* KeyPairManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 95AC6FA61FE00BA10059EFF5 /* KeyPairManager.m */; };
 		B3E7B58A1CC2AC0600A0062D /* RNKyePairManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNKyePairManager.m */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,8 @@
 		95AC6F3B1FDEB92B0059EFF5 /* RNKyePairManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNKyePairManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		95AC6F3C1FDEB92C0059EFF5 /* PtoyClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PtoyClient.swift; sourceTree = "<group>"; };
 		95AC6F3F1FDEB9370059EFF5 /* bundle.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = bundle.js; sourceTree = "<group>"; };
+		95AC6FA51FE00BA10059EFF5 /* KeyPairManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyPairManager.h; sourceTree = "<group>"; };
+		95AC6FA61FE00BA10059EFF5 /* KeyPairManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyPairManager.m; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNKyePairManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNKyePairManager.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNKyePairManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNKyePairManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,10 +57,12 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				95AC6FA51FE00BA10059EFF5 /* KeyPairManager.h */,
+				95AC6FA61FE00BA10059EFF5 /* KeyPairManager.m */,
 				B3E7B5881CC2AC0600A0062D /* RNKyePairManager.h */,
+				B3E7B5891CC2AC0600A0062D /* RNKyePairManager.m */,
 				95AC6F3E1FDEB9370059EFF5 /* Javascript */,
 				95AC6F3C1FDEB92C0059EFF5 /* PtoyClient.swift */,
-				B3E7B5891CC2AC0600A0062D /* RNKyePairManager.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				95AC6F3B1FDEB92B0059EFF5 /* RNKyePairManager-Bridging-Header.h */,
 			);
@@ -129,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95AC6F3D1FDEB92C0059EFF5 /* PtoyClient.swift in Sources */,
+				95AC6FA71FE00BA10059EFF5 /* KeyPairManager.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNKyePairManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
