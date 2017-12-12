@@ -45,5 +45,16 @@
     jsSDK = [jsContext objectForKeyedSubscript:@"sdk"];
     jsCrypto = [jsSDK objectForKeyedSubscript:MODULE_NAME_CRYPTO];
 }
+-(NSString*)generateMnemonic {
+    JSValue *value = [jsSDK objectForKeyedSubscript:FUNC_GEN_MNEMONIC];
+    NSString* mnemonics = [[value callWithArguments:[NSArray array]] toString];
+    //    if let funcGenerateMnemonic = self.jsSDK.objectForKeyedSubscript(FUNC_GEN_MNEMONIC) {
+    //        if let resultMnemonic = funcGenerateMnemonic.call(withArguments: []).toString() {
+    //            return resultMnemonic != "undefined" ? resultMnemonic : nil
+    //        }
+    //        return nil
+    //    }
+    //    return nil
+    return mnemonics;
+}
 @end
-
