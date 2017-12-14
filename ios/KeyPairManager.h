@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface KeyPairManager : NSObject
--(NSString*)generateMnemonic;
-- (NSMutableDictionary *)generateSeed;
+- (NSString*)generateMnemonic;
+- (NSMutableDictionary *)generateSeed;
 @end
 
