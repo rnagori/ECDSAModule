@@ -46,28 +46,30 @@
     jsCrypto = [jsSDK objectForKeyedSubscript:MODULE_NAME_CRYPTO];
 }
 
+//Generate Mnemonic
 - (NSString *)generateMnemonic {
     JSValue *value = [jsSDK objectForKeyedSubscript:FUNC_GEN_MNEMONIC];
     NSString* mnemonics = [[value callWithArguments:[NSArray array]] toString];
     return mnemonics;
 }
 
+//Convert Mnemonics from random seed
 - (NSString *)entropyToMnemonicsWithSeed:(NSMutableData *)data {
     JSValue *value = [jsSDK objectForKeyedSubscript:FUNC_GEN_MNEMONIC];
     NSString *mnemonics = [[value callWithArguments:[NSArray arrayWithObject:data]] toString];
     return mnemonics;
 }
 
-- (NSMutableDictionary *)generateSeed {
+//Generate Mnemonics from random seed
+- (NSString *)generateMnemonicFromSeed {
     NSMutableData *data = [NSMutableData dataWithLength:24];
     int result = SecRandomCopyBytes(NULL, 24, data.mutableBytes);
     NSAssert(result == 0, @"Error generating random bytes: %d", errno);
     NSString *mnemonics = [self entropyToMnemonicsWithSeed:data];
-    NSMutableDictionary* walletData =  [self generateECDSAFromMnemonic:mnemonics];
-    [walletData setObject:mnemonics forKey:@"mnemonic"];
-    return walletData;
+    return mnemonics;
 }
 
+//Generate keypair 
 - (NSMutableDictionary *)generateECDSAFromMnemonic:(NSString *)mnemonic {
     JSValue *value = [jsSDK objectForKeyedSubscript:FUNC_GEN_ECDSA];
     NSDictionary* data = [value callWithArguments:[NSArray arrayWithObject:mnemonic]].toDictionary;
