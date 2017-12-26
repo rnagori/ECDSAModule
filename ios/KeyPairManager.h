@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface KeyPairManager : NSObject
-- (NSString*)generateMnemonic;
-- (NSMutableDictionary *)generateSeed;
+- (NSString *)generateMnemonic;
+- (NSMutableDictionary *)generateSeed;
+- (NSString *)getRawTxnfromData:(NSDictionary*)data;
+-(NSString *)sendTxnfromData:(NSString*)tx;
 @end
-
